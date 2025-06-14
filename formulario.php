@@ -19,7 +19,9 @@
     </h4> 
     </label>  
     <i><strong><label for="nombre">Nombre: </label></strong></i>
-    <input type="nombre">
+    <input type="nombre" required placeholder="Enter your name">
+    <!-- required dice que es obligatorio-->
+    <!-- placeholder es el texto inicial difuminado-->
     <br><br>
     <i><strong><label for="apellido">Apellido: </label></strong></i>
     <input type="apellido">

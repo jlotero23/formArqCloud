@@ -60,14 +60,15 @@ $result = $conn->query($sql);
 
 <head>
     <title>CRUD Usuarios</title>
+    <link href="../sign-in.css" rel="stylesheet">
     <!-- Aca debe ir el <script></script> o el link a los estilos -->
 </head>
 
-<body>
+<body style="background-color: #4682B4">
     <h1>Crear Nuevo Usuario</h1>
     <form method="post" action="CRUD.php">
-        Nombre: <input type="text" name="nombre"><br><br>
-        Correo: <input type="text" name="correo"><br><br>
+        Nombre: <input type="text" name="nombre" class="form-control"><br><br>
+        Correo: <input type="text" name="correo" class="form-signin"><br><br>
         <input type="submit" name="crear" value="Crear">
     </form>
 

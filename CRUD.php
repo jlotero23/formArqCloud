@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "test";
+$dbname = "prueba";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -65,7 +65,7 @@ $result = $conn->query($sql);
 
 <body>
     <h1>Crear Nuevo Usuario</h1>
-    <form method="post" action="crud_usuarios.php">
+    <form method="post" action="CRUD.php">
         Nombre: <input type="text" name="nombre"><br><br>
         Correo: <input type="text" name="correo"><br><br>
         <input type="submit" name="crear" value="Crear">
@@ -86,7 +86,7 @@ $result = $conn->query($sql);
                 echo "<td>" . $row["id"] . "</td>";
                 echo "<td>" . $row["nombre"] . "</td>";
                 echo "<td>" . $row["correo"] . "</td>";
-                echo "<td><a href='crud_usuarios.php?borrar=" . $row["id"] . "'>Borrar</a> | <a href='crud_usuarios.php?editar=" . $row["id"] . "'>Editar</a></td>";
+                echo "<td><a href='CRUD.php?borrar=" . $row["id"] . "'>Borrar</a> | <a href='CRUD.php?editar=" . $row["id"] . "'>Editar</a></td>";
                 echo "</tr>";
             }
         } else {
@@ -104,7 +104,7 @@ $result = $conn->query($sql);
             $row_editar = $result_editar->fetch_assoc();
     ?>
             <h2>Editar Usuario</h2>
-            <form method="post" action="crud_usuarios.php">
+            <form method="post" action="CRUD.php">
                 <input type="hidden" name="id" value="<?php echo $row_editar['id']; ?>">
                 Nombre: <input type="text" name="nombre" value="<?php echo $row_editar['nombre']; ?>"><br><br>
                 Correo: <input type="text" name="correo" value="<?php echo $row_editar['correo']; ?>"><br><br>
